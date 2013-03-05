@@ -1,3 +1,13 @@
+/*
+Joystick Example
+by Matteo Loglio (http://matlo.me)
+
+display a circle whose position
+is determined by the joystick values
+
+remember to upload standardFirmata on the
+Arduino board.
+*/
 import processing.serial.*;
 import cc.arduino.*;
 import com.tinkerkit.*;

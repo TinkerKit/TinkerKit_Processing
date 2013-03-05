@@ -1,3 +1,13 @@
+/*
+LED Example
+by Matteo Loglio (http://matlo.me)
+
+clicking on the circle toggles the 
+LED on and off
+
+remember to upload standardFirmata on the
+Arduino board.
+*/
 import processing.serial.*;
 import cc.arduino.*;
 import com.tinkerkit.*;

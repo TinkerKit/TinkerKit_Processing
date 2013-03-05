@@ -1,3 +1,13 @@
+/*
+Rotary Potentiometer Example
+by Matteo Loglio (http://matlo.me)
+
+display a rectangle whose rotation
+is determined by the potentiometer values
+
+remember to upload standardFirmata on the
+Arduino board.
+*/
 import processing.serial.*;
 import cc.arduino.*;
 import com.tinkerkit.*;

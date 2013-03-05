@@ -1,3 +1,13 @@
+/*
+Button Example
+by Matteo Loglio (http://matlo.me)
+
+change the background color to black 
+if the button is pressed
+
+remember to upload standardFirmata on the
+Arduino board.
+*/
 import processing.serial.*;
 import cc.arduino.*;
 import com.tinkerkit.*;

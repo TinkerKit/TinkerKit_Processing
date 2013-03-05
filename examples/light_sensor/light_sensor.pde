@@ -1,10 +1,20 @@
+/*
+Light Sensor Example
+by Matteo Loglio (http://matlo.me)
+
+the background grayscale color changes 
+based on the light perceived by the sensor
+
+remember to upload standardFirmata on the
+Arduino board.
+*/
 import processing.serial.*;
 import cc.arduino.*;
 import com.tinkerkit.*;
 
 Arduino arduino;
 
-//declare the joystick
+//declare the light sensor
 TKLightSensor ldr;
 
 void setup() {  

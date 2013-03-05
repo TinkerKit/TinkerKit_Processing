@@ -1,10 +1,20 @@
+/*
+Relay Example
+by Matteo Loglio (http://matlo.me)
+
+clicking on the circle toggles the 
+relay on and off
+
+remember to upload standardFirmata on the
+Arduino board.
+*/
 import processing.serial.*;
 import cc.arduino.*;
 import com.tinkerkit.*;
 
 Arduino arduino;
 
-//declare the joystick
+//declare the relay
 TKRelay relay;
 
 //circle parameters

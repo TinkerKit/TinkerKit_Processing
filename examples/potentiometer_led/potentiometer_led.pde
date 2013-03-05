@@ -1,3 +1,13 @@
+/*
+Potentiometer + LED Example
+by Matteo Loglio (http://matlo.me)
+
+the led brightness and the circle fill opacity
+and position are determined by the potentiometer
+
+remember to upload standardFirmata on the
+Arduino board.
+*/
 import processing.serial.*;
 import cc.arduino.*;
 import com.tinkerkit.*;

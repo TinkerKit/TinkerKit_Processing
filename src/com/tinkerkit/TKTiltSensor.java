@@ -12,7 +12,11 @@ public class TKTiltSensor {
     this.arduino = _arduino;
     this.arduino.pinMode(port, Arduino.INPUT);
   }
-
+  
+  /**
+   * get the tilt sensor value. 
+   * @return a boolean value for the state of the sensor
+   */
   public boolean get() {
     int val = arduino.analogRead(port);
     boolean b;

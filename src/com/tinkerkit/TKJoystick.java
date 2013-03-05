@@ -12,11 +12,19 @@ public class TKJoystick {
     this.portX = _portX;
     this.portY = _portY;
   }
-
+  
+  /**
+   * read the X axis
+   * @return a value from 0 to 1023 where 512 is the center
+   */
   public int getXAxis() {
     return arduino.analogRead(portX);
   }
 
+  /**
+   * read the Y axis
+   * @return a value from 0 to 1023 where 512 is the center
+   */
   public int getYAxis() {
     return arduino.analogRead(portY);
   }

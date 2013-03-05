@@ -20,7 +20,11 @@ public class TKButton {
     this.currentState = TK.LOW;
     this.oldState = TK.LOW;
   }
-
+  
+  /**
+   * returns if the button is pressed or not.
+   * @return a boolean that is HIGH (true) or LOW (false)
+   */
   public boolean get() {
     int val = arduino.analogRead(port);
     boolean b;
@@ -29,6 +33,10 @@ public class TKButton {
     return b;
   }
 
+  /**
+   * detects when the button is toggled 
+   * @return a boolean value that changes once the button is toggled
+   */
   public boolean toggle() {
     oldState = currentState;
     currentState = get();
@@ -39,7 +47,11 @@ public class TKButton {
 
     return toggleState;
   }
-
+  
+  /**
+   * detects when the button is pressed
+   * @return a true boolean once the button is pressed
+   */
   public boolean pressed() {
     currentState = get();
     if (currentState == TK.HIGH && oldState == TK.LOW) {
@@ -49,7 +61,11 @@ public class TKButton {
     } else
       return false;
   }
-
+  
+  /**
+   * detects when the button is released
+   * @return a true boolean once the button is released
+   */
   public boolean released() {
     oldState = currentState;
     currentState = get();
@@ -61,7 +77,11 @@ public class TKButton {
     } else
       return false;
   }
-
+  
+  /**
+   * detects when the button is held
+   * @return a true boolean once the button is held
+   */
   public boolean held() {
     if (released() == TK.LOW && oldState == TK.HIGH)
       return true;

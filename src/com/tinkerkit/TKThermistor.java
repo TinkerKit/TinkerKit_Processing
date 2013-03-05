@@ -23,12 +23,20 @@ public class TKThermistor extends TKAnalog {
     this.Ginf = 120.6685f;
   }
 
+  /**
+   * get the temperature value in Celsius degrees.
+   * @return a float value corresponding to the Celsius degree value
+   */
   public float getCelsius() {
     float Rthermistor = Rb * (ADCres / get() - 1);
     float _temperatureC = Beta / (float) (Math.log(Rthermistor * Ginf));
     return _temperatureC - Kelvin;
   }
 
+  /**
+   * get the temperature value in Fahrenheit degrees.
+   * @return a float value corresponding to the Fahrenheit degree value
+   */
   public float getFahrenheit() {
     return (getCelsius() * 9.0f) / 5.0f + 32.0f;
   }

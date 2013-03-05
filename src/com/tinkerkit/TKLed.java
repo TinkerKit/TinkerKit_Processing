@@ -8,6 +8,10 @@ public class TKLed extends TKOut {
     super(_arduino, _port);
   }
 
+  /**
+   * set the brightness of the LED
+   * @param val the brightness int value, from 0 to 1023
+   */
   public void brightness(int val) {
     if (val <= TK.TKMAX && val >= 0) {
       arduino.analogWrite(port, val / 4);

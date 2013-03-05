@@ -25,15 +25,27 @@ public class TKGyro {
     this.yZeroVoltage = 503;
     this.xZeroVoltage = 503;
   }
-
+  
+  /**
+   * returns the X axis angular acceleration value
+   * @return an int from 0 to 1023. 512 is still
+   */
   public int getXAxis() {
     return arduino.analogRead(portX);
   }
 
+
+  /**
+   * returns the Y axis angular acceleration value
+   * @return an int from 0 to 1023. 512 is still
+   */
   public int getYAxis() {
     return arduino.analogRead(portY);
   }
 
+  /**
+   * used to set the origin of the rotation. Keep the gyro still while calibrating
+   */
   public void calibrate() {
     xZeroVoltage = 0;
     yZeroVoltage = 0;
@@ -46,11 +58,19 @@ public class TKGyro {
     yZeroVoltage /= 50;
     xZeroVoltage /= 50;
   }
-
+  
+  /**
+   * returns the angular rate per second over the X axis
+   * @return a long value from -1500 to 1500 if the model is the X1, -6000 to 6000 if the model is the X4 
+   */
   public long getXAxisRate() {
     return ((long) (getXAxis() - xZeroVoltage) * sensitivityInCount) / 1000;
   }
 
+  /**
+   * returns the angular rate per second over the X axis
+   * @return a long value from -1500 to 1500 if the model is the X1, -6000 to 6000 if the model is the X4
+   */
   public long getYAxisRate() {
     return ((long) (getYAxis() - yZeroVoltage) * sensitivityInCount) / 1000;
   }
